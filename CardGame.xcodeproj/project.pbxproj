@@ -13,6 +13,8 @@
 		C6176CC72C47D27A00B1B750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6176CC62C47D27A00B1B750 /* Assets.xcassets */; };
 		C6176CCA2C47D27A00B1B750 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6176CC92C47D27A00B1B750 /* Preview Assets.xcassets */; };
 		C6176CD12C49519900B1B750 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6176CD02C49519900B1B750 /* CardView.swift */; };
+		C625921E2C57D5F80000F7BA /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625921D2C57D5F80000F7BA /* AspectVGrid.swift */; };
+		C62592202C57F0D80000F7BA /* CirclePie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625921F2C57F0D80000F7BA /* CirclePie.swift */; };
 		C68F02B02C4FC94900AD9473 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F02AF2C4FC94900AD9473 /* EmojiMemoryGame.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		C6176CC62C47D27A00B1B750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6176CC92C47D27A00B1B750 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6176CD02C49519900B1B750 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C625921D2C57D5F80000F7BA /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
+		C625921F2C57F0D80000F7BA /* CirclePie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePie.swift; sourceTree = "<group>"; };
 		C68F02AF2C4FC94900AD9473 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				C6176CD02C49519900B1B750 /* CardView.swift */,
+				C625921F2C57F0D80000F7BA /* CirclePie.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				C6176CC22C47D27900B1B750 /* CardGameApp.swift */,
+				C625921D2C57D5F80000F7BA /* AspectVGrid.swift */,
 				C609B6892C52861D006F6F3F /* Views */,
 				C609B68A2C528637006F6F3F /* ViewModels */,
 				C609B6882C52860C006F6F3F /* Models */,
@@ -180,6 +186,8 @@
 			files = (
 				C609B68C2C5286A1006F6F3F /* MemoryGames.swift in Sources */,
 				C6176CC52C47D27900B1B750 /* EmojiMemoryGameView.swift in Sources */,
+				C625921E2C57D5F80000F7BA /* AspectVGrid.swift in Sources */,
+				C62592202C57F0D80000F7BA /* CirclePie.swift in Sources */,
 				C6176CD12C49519900B1B750 /* CardView.swift in Sources */,
 				C6176CC32C47D27900B1B750 /* CardGameApp.swift in Sources */,
 				C68F02B02C4FC94900AD9473 /* EmojiMemoryGame.swift in Sources */,
