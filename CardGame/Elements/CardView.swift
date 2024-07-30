@@ -17,22 +17,21 @@ struct CardView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                let shape = RoundedRectangle(cornerRadius: DrawingConstants.cornerRadius)
-                
-                if card.isFaceUp {
-                    shape.fill().foregroundStyle(.white)
-                    shape.stroke(lineWidth: DrawingConstants.lineWidth)
-                    CirclePie(startAngle: Angle(degrees: -90), endAngle: Angle(degrees: 50))
-                        .opacity(0.3)
-                        .padding(5)
-                    Text(card.content).font(font(in: geometry.size))
-                } else if card.isMatched {
-                    shape.opacity(0)
-                } else {
-                    shape.fill()
-                }
+                CirclePie(startAngle: Angle(degrees: -90), endAngle: Angle(degrees: 50))
+                    .opacity(0.4)
+                    .padding(5)
+                Text(card.content)
+                    .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
+                    .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
+                    .font(Font.system(size: DrawingConstants.fontSize))
+                    .scaleEffect(scale(thatFits: geometry.size))
             }
+            .cardify(isFaceUp: card.isFaceUp)
         }
+    }
+    
+    private func scale(thatFits size: CGSize) -> CGFloat {
+        min(size.width, size.height) / (DrawingConstants.fontSize / DrawingConstants.fontScale)
     }
     
     private func font(in size: CGSize) -> Font {
@@ -40,8 +39,7 @@ struct CardView: View {
     }
     
     private struct DrawingConstants {
-        static let cornerRadius: CGFloat = 15
-        static let lineWidth: CGFloat = 3
+        static let fontSize: CGFloat = 32
         static let fontScale: CGFloat = 0.7
     }
 }
