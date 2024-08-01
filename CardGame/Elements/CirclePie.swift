@@ -12,6 +12,16 @@ struct CirclePie: Shape {
     var endAngle: Angle
     var clockwise = false
     
+    var animetableData: AnimatablePair<Double, Double> {
+        get {
+            AnimatablePair(startAngle.radians, endAngle.radians)
+        }
+        set {
+            startAngle = Angle.radians(newValue.first)
+            endAngle = Angle.radians(newValue.second)
+        }
+    }
+    
     func path(in rect: CGRect) -> Path {
         
         let center = CGPoint(x: rect.midX, y: rect.midY)

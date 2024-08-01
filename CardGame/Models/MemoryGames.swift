@@ -65,6 +65,8 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         let content: CardContent
         let id: Int
         
+        
+        
         //MARK: Bonus Time
         var bonusTimeLimit: TimeInterval = 6
 
@@ -85,7 +87,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         }
 
         var bonusRemaining: Double {
-            (bonusTimeLimit > 0 && bonusTimeRemaining > 0) ? bonusTimeRemaining / bonusTimeLimit : 0
+            (bonusTimeLimit > 0 && bonusTimeRemaining > 0) ? bonusTimeRemaining/bonusTimeLimit : 0
         }
 
         var hasEarnedBonus: Bool {
